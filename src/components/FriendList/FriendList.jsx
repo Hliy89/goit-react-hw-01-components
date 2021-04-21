@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 
 import style from "./FriendList.module.css";
 
-import FriendListItem from './FriendListItem';
+import FriendListItem from './FriendListItem/FriendListItem';
 
 const FriendList = ({friends}) => {
-    const friendElement = friends.map(({ id, ...props }) => <FriendListItem key={id} {...props} />);
+    const friendElements = friends.map(({ id, ...props }) => <FriendListItem key={id} {...props} />);
     return <ul className={style.friendList}>
-                {friendElement}
+                {friendElements}
            </ul>
 };
 

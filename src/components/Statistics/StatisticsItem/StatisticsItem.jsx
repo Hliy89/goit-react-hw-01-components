@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from 'prop-types';
 
-import style from "./Statistics.module.css";
+import style from "./StatisticItem.module.css";
 
 const randomColor = () => '#' + Math.floor(Math.random() * 16777215).toString(16);
 

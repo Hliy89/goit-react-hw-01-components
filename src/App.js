@@ -7,10 +7,10 @@ import TransactionHistory from './components/TransactionHistory/TransactionHisto
 
 import style from "./App.module.css";
 
-import user from '../src/components/Profile/user.json';
-import stats from '../src/components/Statistics/statistical-data.json';
-import friends from '../src/components/FriendList/friends.json';
-import transactions from '../src/components/TransactionHistory/transactions.json';
+import user from './json/user.json';
+import stats from './json/statistical-data.json';
+import friends from './json/friends.json';
+import transactions from './json/transactions.json';
 
 const App = () => {
     return (

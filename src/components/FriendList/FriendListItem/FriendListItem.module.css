@@ -1,10 +1,4 @@
-.friendList {
-  margin: auto;
-  text-align: center;
-  font-family: Roboto, sans-serif;
-}
-
-/* .item {
+.item {
   display: flex;
   padding-top: 20px;
   margin: auto;
@@ -13,9 +7,9 @@
   list-style: none;
   border: 2px solid violet;
   font-weight: bold;
-} */
+}
 
-/* .name {
+.name {
   margin-right: 10px;
 }
 
@@ -31,4 +25,4 @@
 
 .statusOffline {
   background-color: red;
-} */
+}
