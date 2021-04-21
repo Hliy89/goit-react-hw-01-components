@@ -2,33 +2,34 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import defaulImage from './default-img.png';
 
-import "./Profile.css";
+import style from "./Profile.module.css";
 
-const Profile = ({avatar,name,tag,location,followers,views,likes}) => {
-    return <div className="profile">
-        <div className="description">
+
+const Profile = ({avatar,name,tag,location,stats}) => {
+    return <div className={style.profile}>
+        <div className={style.description}>
             <img
                 src={avatar}
                 alt={name}
-                className="avatar"
+                className={style.avatar}
             />
-            <p className="name">{name}</p>
-            <p className="tag">{tag}</p>
-            <p className="location">{location}</p>
+            <p className={style.name}>{name}</p>
+            <p className={style.tag}>{tag}</p>
+            <p className={style.location}>{location}</p>
         </div>
 
-        <ul className="stats">
-            <li>
-                <span className="label">Followers</span>
-                <span className="quantity">{followers}</span>
+        <ul className={style.stats}>
+            <li className={style.statsItem}>
+                <span className={style.label}>Followers</span>
+                <span className={style.quantity}>{stats.followers}</span>
             </li>
-            <li>
-                <span className="label">Views</span>
-                <span className="quantity">{views}</span>
+            <li className={style.statsItem}>
+                <span className={style.label}>Views</span>
+                <span className={style.quantity}>{stats.views}</span>
             </li>
-            <li>
-                <span className="label">Likes</span>
-                <span className="quantity">{likes}</span>
+            <li className={style.statsItem}>
+                <span className={style.label}>Likes</span>
+                <span className={style.quantity}>{stats.likes}</span>
             </li>
         </ul>
     </div>
@@ -43,9 +44,13 @@ Profile.propTypes = {
     name: PropTypes.string.isRequired,
     tag: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
-    followers: PropTypes.number.isRequired,
-    views: PropTypes.number.isRequired,
-    likes: PropTypes.number.isRequired,
+    stats: PropTypes.shape(
+        {
+            followers: PropTypes.number.isRequired,
+            views: PropTypes.number.isRequired,
+            likes: PropTypes.number.isRequired
+        }).isRequired,
+    
 };
 
 export default Profile;
